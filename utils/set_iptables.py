@@ -7,11 +7,11 @@ def set_iptables():
 	no_choice = {'no', 'n'}
 
 	print("[+] Setting iptables...")
-	user_input = input("[+] Queue number is 0. Is this acceptable? y/n  ").lower().strip()
+	user_input = raw_input("[+] Queue number is 0. Is this acceptable? y/n  ").lower().strip()
 	if user_input in yes_choice:
 		number = 0
 	if user_input in no_choice:
-		number = input("Please provide a queue number: ").strip()
+		number = raw_input("Please provide a queue number: ").lower().strip()
 	print("[+] Queue number is: ", number)
 	subprocess.call(["sudo", "iptables", "-I", "FORWARD", "-j", "NFQUEUE", "--queue-num", str(number), "--queue-bypass"])
 	subprocess.call(["sudo", "iptables", "-I", "INPUT", "-j", "NFQUEUE", "--queue-num", str(number), "--queue-bypass"])

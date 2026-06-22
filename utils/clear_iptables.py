@@ -6,7 +6,7 @@ def clear_iptables():
 	no_choice = {'no', 'n'}
 
 	print("[+] Flushing iptables...")
-	user_input = input("[+] IP Tables will be cleared? y/n ").lower().strip()
+	user_input = raw_input("[+] IP Tables will be cleared? y/n ").lower().strip()
 	if user_input in yes_choice:
 		subprocess.call(["sudo", "iptables", "--flush"])
 	if user_input in no_choice:
