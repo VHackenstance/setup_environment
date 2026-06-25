@@ -2,10 +2,11 @@
 <p>A single script to set up the basics for testing OnPath Attacks
 </p>
 <h4>Running this script to test Bettercap sslstrip.  Firstly</h4>
-<ul>
-    <li>run arp_spoof, test against target vm using arp -a</li>
-    <li>run packet_sniffer, test against http test sites</li>
-</ul>
+<ol>
+    <li>run arp_spoof.py, test against target vm using arp -a</li>
+    <li>run packet_sniffer.py, test against http test sites</li>
+    <li>run setup_environment, which is main.py</li>
+</ol>
 <h4>Now we run our script here</h4>
 run <b>sudo python main.py</b> from the setup_environment folder.
 <br/>
