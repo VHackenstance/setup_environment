@@ -19,7 +19,7 @@ def enable_port_forwarding():
                 print("[+] Port Forwarding enabled we can proceed.")
                 value = 1
             elif value == "0":
-                confirmation = raw_input("Port Forwarding should be enabled? y/n ").lower().strip()
+                confirmation = raw_input("\n[+] Port Forwarding should be enabled? y/n ").lower().strip()
                 if confirmation in yes_choice:
                     subprocess.call(
                         "echo 1 | sudo tee /proc/sys/net/ipv4/ip_forward",
