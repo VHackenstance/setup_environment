@@ -7,12 +7,16 @@
     <li>run packet_sniffer.py, test against http test sites</li>
     <li>run setup_environment, which is main.py</li>
 </ol>
-<h4>Now we run our script here</h4>
-run <b>sudo python main.py</b> from the setup_environment folder.
+You CAN do all this manually by the way.
+<h4>UPDATE: This does work, but only if you type in the actual domain name</h4>
+You have to give the server the opportunity to connect to the http service
 <br/>
-What is going on under  the hood, you CAN do all this manually by the way.
+first, otherwise, for example if you click a https link, it just goes to 
+<br/>
+HTTPS.  I have not tested against raw IP Addresses.  
+<h4>What is happening in the script</h4>
 <ol>
-    <li>Check Port Forwarding. Enable Port Forwarding.</li>
+    <li>Checking Port Forwarding. Enable Port Forwarding.</li>
     <li>Set IP Tables.
         <br/>
         I set both local and remote because there is no conflict and why not.
@@ -21,12 +25,6 @@ What is going on under  the hood, you CAN do all this manually by the way.
     <li>Listen for Ctrl+C and when we get it shut it all down.</li>
     <li>You need to Ctrl+C arp_spoof and packet_sniffer separately</li>
 </ol>
-<h4>UPDATE: Tested and works fine</h4>
-On certain sites, those that don't have HSTS strictly implemented, and then
-<br/>
-When you type the domain name into the address bar, rather than click a link
-<br/>
-from a search engine etc.  Not tested against raw IPs.
 <h4>UPDATE: RVM connection bug.</h4>
 There can be a connect to the internet bug on remote targets,
 <br/>
